@@ -269,6 +269,109 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Cart Endpoints
+    meta:
+      id: fld_667693a5b9984d8fb42e1468757a2f06
+      created: 1783107776567
+      modified: 1783107776567
+      sortKey: -1783107776567
+      description: ""
+    children:
+      - url: http://localhost:8080/api/cart
+        name: Add to Cart
+        meta:
+          id: req_3efb573405a94f5091a6e0c093c3c438
+          created: 1783107779944
+          modified: 1783108901956
+          isPrivate: false
+          description: ""
+          sortKey: -1783107779944
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"productId":1,
+            	"quantity": 2
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: X-User-ID
+            value: "1"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/cart
+        name: Get Cart
+        meta:
+          id: req_4573900f35504f0da48b6603779e391e
+          created: 1783108908971
+          modified: 1783109001241
+          isPrivate: false
+          description: ""
+          sortKey: -1783106816319
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: X-User-ID
+            value: "1"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/cart/items/1
+        name: Delete Cart Item
+        meta:
+          id: req_dc02c825ba16466dad4a7ded6e82e336
+          created: 1783109015125
+          modified: 1783109130987
+          isPrivate: false
+          description: ""
+          sortKey: -1783109015125
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: X-User-ID
+            value: "1"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
