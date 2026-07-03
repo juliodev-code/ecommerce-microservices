@@ -372,6 +372,41 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Order Endpoints
+    meta:
+      id: fld_30fb0245e8904bea834717195312df2c
+      created: 1783112060500
+      modified: 1783112060500
+      sortKey: -1783112060500
+      description: ""
+    children:
+      - url: http://localhost:8080/api/orders
+        name: Submit Order
+        meta:
+          id: req_1e2a7c92061c41fbb9510f4ec824b343
+          created: 1783112063499
+          modified: 1783112294866
+          isPrivate: false
+          description: ""
+          sortKey: -1783112063499
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: X-User-ID
+            value: "1"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
