@@ -20,10 +20,10 @@ collection:
         meta:
           id: req_8bb158b6cdec4c96b45644b1d50b5c28
           created: 1782855325146
-          modified: 1783103102002
+          modified: 1783106032110
           isPrivate: false
           description: ""
-          sortKey: -1782857725637
+          sortKey: -1782857725737
         method: POST
         body:
           mimeType: application/json
@@ -108,6 +108,155 @@ collection:
         headers:
           - name: Content-Type
             value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: ProductEndpoints
+    meta:
+      id: fld_a6947e3e3ea24769be282fd547476141
+      created: 1783105317369
+      modified: 1783105317369
+      sortKey: -1783105317369
+      description: ""
+    children:
+      - url: http://localhost:8080/api/products
+        name: Get All Products
+        meta:
+          id: req_4a0264d2a06f49789c1e8a23e4cd315e
+          created: 1783105326274
+          modified: 1783105621540
+          isPrivate: false
+          description: ""
+          sortKey: -1783105326274
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/products
+        name: Create Product
+        meta:
+          id: req_57732c3dd96c4cf6917faf56e1bd3396
+          created: 1783105372662
+          modified: 1783105618360
+          isPrivate: false
+          description: ""
+          sortKey: -1783105372662
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name":"Java Book",
+            	"description":"This a book about Java programming",
+            	"price": 15.99,
+            	"stockQuantity":5,
+            	"category":"Tech Books",
+            	"imageUrl":"http://s3.amazon.com/img1"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/products/1
+        name: Update Product
+        meta:
+          id: req_0f93f66fd172454fb0ab4d25e184f40c
+          created: 1783105635175
+          modified: 1783105715738
+          isPrivate: false
+          description: ""
+          sortKey: -1783105635175
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name":"Java Book 2",
+            	"description":"This a book about Java programming 2",
+            	"price": 17.99,
+            	"stockQuantity":10,
+            	"category":"Tech Books",
+            	"imageUrl":"http://s3.amazon.com/img2"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/products/search?keyword=Java
+        name: Search Product
+        meta:
+          id: req_7b1d8b5a6e9b47ce860b56e9b8f9cad7
+          created: 1783105732888
+          modified: 1783105933800
+          isPrivate: false
+          description: ""
+          sortKey: -1783105732888
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/products/1
+        name: Delete Product
+        meta:
+          id: req_67781eff8887402280ada7414387ed2e
+          created: 1783105852694
+          modified: 1783106026514
+          isPrivate: false
+          description: ""
+          sortKey: -1783105852694
+        method: DELETE
+        headers:
           - name: User-Agent
             value: insomnia/12.6.0
             description: ""
