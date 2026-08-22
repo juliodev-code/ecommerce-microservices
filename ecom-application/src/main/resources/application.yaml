@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: ecom-application
+  #h2:
+    #console:
+      #enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecomdb
+    username: root
+    password: root
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+info:
+  app:
+    name: ecom-application
+    description: E-commerce application for managing products and orders
+    version: 1.0.0
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "heath,info"
+  info:
+    env:
+      enabled: true

@@ -1,422 +1,859 @@
 type: collection.insomnia.rest/5.0
 schema_version: "5.1"
-name: Ecommerce-Requests
+name: Java Professional eCommerce Project
 meta:
-  id: wrk_2f0c2d8fe4c041cfa2a99ceeaa088a2b
-  created: 1780087608985
-  modified: 1783102791131
+  id: wrk_542b10b97ff240a79796c11776d92aa5
+  created: 1783219877905
+  modified: 1785976636781
   description: ""
 collection:
-  - name: UserEndpoint
+  - name: Professional eCommerce Project
     meta:
-      id: fld_3bbe0fe02649475c870333f7beb967af
-      created: 1782857666868
-      modified: 1782857666868
-      sortKey: -1782857666869
+      id: fld_3792adc5f0c543c98fc4c4f4e180509d
+      created: 1783219877907
+      modified: 1785976605376
+      sortKey: -1783219872211
       description: ""
     children:
-      - url: http://localhost:8080/api/users
-        name: Create User
+      - name: Spring Boot Ecommerce
         meta:
-          id: req_8bb158b6cdec4c96b45644b1d50b5c28
-          created: 1782855325146
-          modified: 1783106032110
-          isPrivate: false
+          id: fld_e06898e704b74086b89024cd21bea557
+          created: 1783219877912
+          modified: 1783219877912
+          sortKey: -1783219872202
           description: ""
-          sortKey: -1782857725737
-        method: POST
-        body:
-          mimeType: application/json
-          text: |-
-            {
-                "firstName": "Sophia",
-                "lastName": "Martinez",
-                "email": "sophia.martinez@example.com",
-                "phone": "923456789",
-                "address": {
-                  "street": "128 Maple Street",
-                  "city": "Austin",
-                  "state": "Texas",
-                  "country": "USA",
-                  "zipcode": "73301"
-                }
-              }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/api/users
-        name: Get All users
-        meta:
-          id: req_a95ceefa4a0e438e9942439d75e694a1
-          created: 1782856289175
-          modified: 1782857833795
-          isPrivate: false
-          description: ""
-          sortKey: -1782857725537
-        method: GET
-        headers:
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/api/users/1
-        name: Update User
-        meta:
-          id: req_149df122abf548dcab6f07fa4d4f5b87
-          created: 1782857725437
-          modified: 1783103133555
-          isPrivate: false
-          description: ""
-          sortKey: -1782857725437
-        method: PUT
-        body:
-          mimeType: application/json
-          text: |-
-            {
-            	"firstName": "Daniel",
-            	"lastName": "Kim",
-            	"email": "daniel.kim@example.com",
-            	"phone": "934567890",
-            	"address": {
-            		"street": "77 Pine Road",
-            		"city": "Denver",
-            		"state": "Colorado",
-            		"country": "USA",
-            		"zipcode": "80202"
-            	}
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-  - name: ProductEndpoints
-    meta:
-      id: fld_a6947e3e3ea24769be282fd547476141
-      created: 1783105317369
-      modified: 1783105317369
-      sortKey: -1783105317369
-      description: ""
-    children:
-      - url: http://localhost:8080/api/products
-        name: Get All Products
-        meta:
-          id: req_4a0264d2a06f49789c1e8a23e4cd315e
-          created: 1783105326274
-          modified: 1783105621540
-          isPrivate: false
-          description: ""
-          sortKey: -1783105326274
-        method: GET
-        headers:
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/api/products
-        name: Create Product
-        meta:
-          id: req_57732c3dd96c4cf6917faf56e1bd3396
-          created: 1783105372662
-          modified: 1783105618360
-          isPrivate: false
-          description: ""
-          sortKey: -1783105372662
-        method: POST
-        body:
-          mimeType: application/json
-          text: |-
-            {
-            	"name":"Java Book",
-            	"description":"This a book about Java programming",
-            	"price": 15.99,
-            	"stockQuantity":5,
-            	"category":"Tech Books",
-            	"imageUrl":"http://s3.amazon.com/img1"
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/api/products/1
-        name: Update Product
-        meta:
-          id: req_0f93f66fd172454fb0ab4d25e184f40c
-          created: 1783105635175
-          modified: 1783105715738
-          isPrivate: false
-          description: ""
-          sortKey: -1783105635175
-        method: PUT
-        body:
-          mimeType: application/json
-          text: |-
-            {
-            	"name":"Java Book 2",
-            	"description":"This a book about Java programming 2",
-            	"price": 17.99,
-            	"stockQuantity":10,
-            	"category":"Tech Books",
-            	"imageUrl":"http://s3.amazon.com/img2"
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/api/products/search?keyword=Java
-        name: Search Product
-        meta:
-          id: req_7b1d8b5a6e9b47ce860b56e9b8f9cad7
-          created: 1783105732888
-          modified: 1783105933800
-          isPrivate: false
-          description: ""
-          sortKey: -1783105732888
-        method: GET
-        headers:
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/api/products/1
-        name: Delete Product
-        meta:
-          id: req_67781eff8887402280ada7414387ed2e
-          created: 1783105852694
-          modified: 1783106026514
-          isPrivate: false
-          description: ""
-          sortKey: -1783105852694
-        method: DELETE
-        headers:
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-  - name: Cart Endpoints
-    meta:
-      id: fld_667693a5b9984d8fb42e1468757a2f06
-      created: 1783107776567
-      modified: 1783107776567
-      sortKey: -1783107776567
-      description: ""
-    children:
-      - url: http://localhost:8080/api/cart
-        name: Add to Cart
-        meta:
-          id: req_3efb573405a94f5091a6e0c093c3c438
-          created: 1783107779944
-          modified: 1783108901956
-          isPrivate: false
-          description: ""
-          sortKey: -1783107779944
-        method: POST
-        body:
-          mimeType: application/json
-          text: |-
-            {
-            	"productId":1,
-            	"quantity": 2
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-          - name: X-User-ID
-            value: "1"
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/api/cart
-        name: Get Cart
-        meta:
-          id: req_4573900f35504f0da48b6603779e391e
-          created: 1783108908971
-          modified: 1783109001241
-          isPrivate: false
-          description: ""
-          sortKey: -1783106816319
-        method: GET
-        body:
-          mimeType: application/json
-          text: ""
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-          - name: X-User-ID
-            value: "1"
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-      - url: http://localhost:8080/api/cart/items/1
-        name: Delete Cart Item
-        meta:
-          id: req_dc02c825ba16466dad4a7ded6e82e336
-          created: 1783109015125
-          modified: 1783109130987
-          isPrivate: false
-          description: ""
-          sortKey: -1783109015125
-        method: DELETE
-        headers:
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-          - name: X-User-ID
-            value: "1"
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
-  - name: Order Endpoints
-    meta:
-      id: fld_30fb0245e8904bea834717195312df2c
-      created: 1783112060500
-      modified: 1783112060500
-      sortKey: -1783112060500
-      description: ""
-    children:
-      - url: http://localhost:8080/api/orders
-        name: Submit Order
-        meta:
-          id: req_1e2a7c92061c41fbb9510f4ec824b343
-          created: 1783112063499
-          modified: 1783112294866
-          isPrivate: false
-          description: ""
-          sortKey: -1783112063499
-        method: POST
-        headers:
-          - name: User-Agent
-            value: insomnia/12.6.0
-            description: ""
-            disabled: false
-          - name: X-User-ID
-            value: "1"
-            description: ""
-            disabled: false
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
+        children:
+          - name: Product
+            meta:
+              id: fld_127442c7ef5343a9890d0cefc34af53c
+              created: 1783219877912
+              modified: 1783219877912
+              sortKey: -1783219872201
+              description: ""
+            children:
+              - url: http://localhost:8080/api/products/1/image
+                name: Update Product Image
+                meta:
+                  id: req_0d27fb3af91e4b04a8ed4d9d7f3f635f
+                  created: 1783219877913
+                  modified: 1783378052259
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872198
+                method: PUT
+                body:
+                  mimeType: multipart/form-data
+                  params:
+                    - name: image
+                      disabled: false
+                      fileName: /Users/juliodev/Downloads/dumbell.webp
+                      type: file
+                headers:
+                  - name: Content-Type
+                    value: multipart/form-data
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/admin/products/157
+                name: Update Product
+                meta:
+                  id: req_8856967ba87547f381aef699e5edca81
+                  created: 1783219877913
+                  modified: 1783219877913
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872199
+                method: PUT
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \    \"productName\": \"Adjustable dumbbell set for home
+                    workouts | Premium Quality\",\r
+
+                    \    \"description\": \"Adjustable dumbbell set for home
+                    workouts, can be used indoors, outdoors, at your personal
+                    gym. This is available at lowest possible rates.\",\r
+
+                    \    \"quantity\": 0,\r
+
+                    \    \"price\": 90,\r
+
+                    \    \"discount\": 10\r
+
+                    }\r\n"
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/admin/categories/5/product
+                name: Add Product
+                meta:
+                  id: req_95e5bb76c96b4ca6a26c843e1eb44237
+                  created: 1783219877913
+                  modified: 1783999913054
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872200
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: >-
+                    {
+                      "productName": "Clean Code: A Handbook of Agile Software Craftsmanship | Programming Best Seller",
+                      "description": "Comprehensive guide to writing clean, maintainable, and efficient code. Covers software development best practices, refactoring techniques, and principles for building high-quality applications.",
+                      "quantity": 120,
+                      "price": 39.99,
+                      "discount": 10
+                    }
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/public/products/keyword/rob
+                name: Get Products By Keyword
+                meta:
+                  id: req_5b2f187cec0a422a82385b43ec8b28d8
+                  created: 1783219877914
+                  modified: 1783946810757
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872195
+                method: GET
+                parameters:
+                  - name: pageNumber
+                    value: "0"
+                    disabled: false
+                  - name: pageSize
+                    value: "10"
+                    disabled: false
+                  - name: sortBy
+                    value: productName
+                    disabled: false
+                  - name: sortOrder
+                    value: desc
+                    disabled: false
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/admin/products/1
+                name: Delete Product
+                meta:
+                  id: req_5ed8f9ceae8d473299437a9be163796d
+                  created: 1783219877914
+                  modified: 1783219877914
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872197
+                method: DELETE
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/public/products
+                name: Get All Products
+                meta:
+                  id: req_c0f57de2110a4d0c90e1799e9040f169
+                  created: 1783219877914
+                  modified: 1783948948159
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872196
+                method: GET
+                parameters:
+                  - name: pageNumber
+                    value: "1"
+                    disabled: true
+                  - name: sortBy
+                    value: price
+                    disabled: false
+                  - name: sortOrder
+                    value: desc
+                    disabled: false
+                  - name: keyword
+                    value: blender
+                    disabled: true
+                  - name: category
+                    value: Sports & Fitness
+                    disabled: false
+                  - name: pageSize
+                    value: "20"
+                    disabled: false
+                headers:
+                  - name: Authorization
+                    value: Bearer
+                      eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcxNTE4MzY0OSwiZXhwIjoxNzE1MTg2NjQ5fQ.XS0-JKPhMJMrULRonqYLQzhJFTFOXGxkeuFj4q4mxeE
+                    disabled: true
+                authentication:
+                  type: bearer
+                  disabled: false
+                  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcxNTE4MzY0OSwiZXhwIjoxNzE1MTg2NjQ5fQ.XS0-JKPhMJMrULRonqYLQzhJFTFOXGxkeuFj4q4mxeE
+                  prefix: ""
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/public/categories/1/products
+                name: Get Products By Category
+                meta:
+                  id: req_d6b9be2bbb0d4b1982b0863736cdcbc8
+                  created: 1783219877915
+                  modified: 1783219877915
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872194
+                method: GET
+                parameters:
+                  - name: pageNumber
+                    value: "0"
+                    disabled: false
+                  - name: pageSize
+                    value: "10"
+                    disabled: false
+                  - name: sortBy
+                    value: productId
+                    disabled: false
+                  - name: sortOrder
+                    value: desc
+                    disabled: false
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+          - name: Category
+            meta:
+              id: fld_7db35baf6f8744749f6e79e50663471b
+              created: 1783219877915
+              modified: 1783219877915
+              sortKey: -1783219872193
+              description: ""
+            children:
+              - url: http://localhost:8080/api/public/categories
+                name: Get All Categories
+                meta:
+                  id: req_31af2ad6bd8d4c02a1c85ade173ed05f
+                  created: 1783219877916
+                  modified: 1783219877916
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872192
+                method: GET
+                parameters:
+                  - name: pageNumber
+                    value: "0"
+                    disabled: true
+                  - name: pageSize
+                    value: "10"
+                    disabled: true
+                  - name: sortBy
+                    value: categoryName
+                    disabled: true
+                  - name: sortOrder
+                    value: desc
+                    disabled: true
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/admin/categories/4
+                name: DELETE Category
+                meta:
+                  id: req_b28c7aa81fd74631968817a02fbf209b
+                  created: 1783219877916
+                  modified: 1783219877916
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872191
+                method: DELETE
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/public/categories
+                name: Create new Category
+                meta:
+                  id: req_b871a0136d834585a91173484793861a
+                  created: 1783219877917
+                  modified: 1783999264540
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872190
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: |-
+                    {
+                        "categoryName":"Toys"
+                    }
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/public/categories/1
+                name: Update Category
+                meta:
+                  id: req_366084064ab34db18a185e8870ab292e
+                  created: 1783219877918
+                  modified: 1783219877918
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872189
+                method: PUT
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \    \"categoryName\":\"Travel Updated\"\r
+
+                    }"
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+          - name: Authentication
+            meta:
+              id: fld_93b653f7294f4ca6b0785d027da972bc
+              created: 1783219877918
+              modified: 1783219877918
+              sortKey: -1783219872188
+              description: ""
+            children:
+              - url: http://localhost:8080/api/auth/user
+                name: GetUser
+                meta:
+                  id: req_0b1c634461e14de2a554e805304d9c75
+                  created: 1783219877919
+                  modified: 1783219877919
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872185
+                method: GET
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/auth/username
+                name: GetUserName
+                meta:
+                  id: req_31eaeb2f504943a79f53030a9de7a695
+                  created: 1783219877919
+                  modified: 1783219877919
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872186
+                method: GET
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/auth/signin
+                name: Sign in
+                meta:
+                  id: req_563528a282444d7481f3e744b89a11fe
+                  created: 1783219877919
+                  modified: 1783219877919
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872187
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \    \"username\":\"user1\",\r
+
+                    \    \"password\":\"password1\"\r
+
+                    }"
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/auth/signout
+                name: Sign Out
+                meta:
+                  id: req_71ea51d0cf4e410b87089cf55a05e976
+                  created: 1783219877919
+                  modified: 1783219877919
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872184
+                method: POST
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/auth/signup
+                name: Sign up
+                meta:
+                  id: req_b00b82f710294a2a9e99443965486e5a
+                  created: 1783219877920
+                  modified: 1784750819906
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872183
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: |-
+                    {
+                        "username":"user3",
+                        "email":"user3email@gmail.com",
+                        "password":"password1"
+                    }
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+          - name: Cart
+            meta:
+              id: fld_8d9f4187c6ad473b9d41c3d4e84691cd
+              created: 1783219877920
+              modified: 1783219877920
+              sortKey: -1783219872182
+              description: ""
+            children:
+              - url: http://localhost:8080/api/carts/products/1/quantity/1
+                name: Add product to cart
+                meta:
+                  id: req_4e2cfe5cfd9c482c8606de53a97b5c5f
+                  created: 1783219877920
+                  modified: 1783219877920
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872181
+                method: POST
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/carts
+                name: Get all carts
+                meta:
+                  id: req_68513826d7ae474882009bb575cd0aa3
+                  created: 1783219877921
+                  modified: 1783219877921
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872180
+                method: GET
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/cart/products/1/quantity/delete
+                name: Update quantity of product in Cart
+                meta:
+                  id: req_a18e491a79224dc78d821761217c92ab
+                  created: 1783219877921
+                  modified: 1783219877921
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872178
+                method: PUT
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/carts/users/cart
+                name: Get User Cart
+                meta:
+                  id: req_e64380a7c7534b8eb570dc05c4a9d80e
+                  created: 1783219877921
+                  modified: 1783219877921
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872179
+                method: GET
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/carts/1/product/1
+                name: Delete product from cart
+                meta:
+                  id: req_23fd0ca3e91f4b5c9a42967a132bfc96
+                  created: 1783219877922
+                  modified: 1783219877922
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872177
+                method: DELETE
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+          - name: Addresses
+            meta:
+              id: fld_3b68ad2b25ac44b4aa4b5f05b2d08938
+              created: 1783219877922
+              modified: 1783219877922
+              sortKey: -1783219872176
+              description: ""
+            children:
+              - url: http://localhost:8080/api/addresses
+                name: Create Address
+                meta:
+                  id: req_a38251397c574f2e8a10de59eef7dff0
+                  created: 1783219877922
+                  modified: 1783219877922
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872175
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \    \"country\": \"USA\",\r
+
+                    \    \"city\": \"San Francisco\",\r
+
+                    \    \"street\": \"Market Street\",\r
+
+                    \    \"pincode\": \"94103\",\r
+
+                    \    \"buildingName\": \"Bay Apartments\",\r
+
+                    \    \"state\": \"California\"\r
+
+                    }\r\n"
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/addresses/1
+                name: Update Address
+                meta:
+                  id: req_a527130bf99d4bf69cb2e281c878777a
+                  created: 1783219877922
+                  modified: 1783219877922
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872174
+                method: PUT
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \    \"country\": \"USA\",\r
+
+                    \    \"city\": \"San Francisco\",\r
+
+                    \    \"street\": \"Market Street\",\r
+
+                    \    \"pincode\": \"94103\",\r
+
+                    \    \"buildingName\": \"Bay Apartments Updated\",\r
+
+                    \    \"state\": \"California\"\r
+
+                    }\r\n"
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/addresses/2
+                name: Delete Address
+                meta:
+                  id: req_085663100fc04b0785bae505d341012f
+                  created: 1783219877923
+                  modified: 1783219877923
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872171
+                method: DELETE
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/users/addresses
+                name: Get User Addresses
+                meta:
+                  id: req_24898750b6db4789a8a51cdb2c4fa1d3
+                  created: 1783219877923
+                  modified: 1783219877923
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872170
+                method: GET
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/addresses
+                name: Get Addresses
+                meta:
+                  id: req_d175a0842360413a89b6f52d95951bf8
+                  created: 1783219877923
+                  modified: 1783219877923
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872173
+                method: GET
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/addresses/1
+                name: Get Address By Id
+                meta:
+                  id: req_fe2536a7e9474f7fbbc588b6a478b3f9
+                  created: 1783219877923
+                  modified: 1783219877923
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872172
+                method: GET
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+          - name: Orders
+            meta:
+              id: fld_7259a8f5145c45d29a624bd9df15a0d2
+              created: 1783219877924
+              modified: 1783219877924
+              sortKey: -1783219872169
+              description: ""
+            children:
+              - url: http://localhost:8080/api/order/users/payments/CARD
+                name: Place Order
+                meta:
+                  id: req_5114c95e17ce4f4da8d53b13b564b4ed
+                  created: 1783219877924
+                  modified: 1785974817012
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872168
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \  \"addressId\": 1,\r
+
+                    \  \"pgName\": \"Stripe\",\r
+
+                    \  \"pgPaymentId\": \"pi_1FHEhK2eZvKYlo2CcK4UJNdW\",\r
+
+                    \  \"pgStatus\": \"succeeded\",\r
+
+                    \  \"pgResponseMessage\": \"Payment successful\"\r
+
+                    }"
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/order/stripe-client-secret
+                name: StripeClientSecret
+                meta:
+                  id: req_af39eda6b2044e498be62efe0694c007
+                  created: 1783219877924
+                  modified: 1783219877924
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1783219872167
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: "{\r
+
+                    \  \"amount\": 2000,\r
+
+                    \  \"currency\": \"usd\"\r
+
+                    }"
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:8080/api/admin/orders
+                name: Get All Orders
+                meta:
+                  id: req_8005ee49c1cb44d28c99914e0c80903b
+                  created: 1785974697680
+                  modified: 1785974881635
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1785974697680
+                method: GET
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
-    id: jar_e94fa9e8b7e10f151834555b6a2071eda7cd2e55
-    created: 1780087608988
-    modified: 1780087608988
+    id: jar_aecc310247fd2bc3b0660574b0a93e3d842bad6b
+    created: 1783219878242
+    modified: 1785974795156
+  cookies:
+    - id: e7717c95-2c92-4152-ba9d-ad7bc06c5ec9
+      key: springBootEcommerce
+      value: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc4NTk3NDc5NSwiZXhwIjoxNzg2Mjc0Nzk1fQ.TavhJROS_tksBaemYhrFUd7ZJN3WwHJhelnEiFTMHZ0
+      domain: localhost
+      path: /api
+      secure: false
+      httpOnly: false
+      hostOnly: true
 environments:
   name: Base Environment
   meta:
-    id: env_e94fa9e8b7e10f151834555b6a2071eda7cd2e55
-    created: 1780087608986
-    modified: 1780087608986
+    id: env_aecc310247fd2bc3b0660574b0a93e3d842bad6b
+    created: 1783219877924
+    modified: 1783219877924
     isPrivate: false
