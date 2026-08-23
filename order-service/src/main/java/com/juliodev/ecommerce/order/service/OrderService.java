@@ -2,11 +2,10 @@ package com.juliodev.ecommerce.order.service;
 
 import com.juliodev.ecommerce.order.dto.OrderItemDTO;
 import com.juliodev.ecommerce.order.dto.OrderResponse;
-import com.juliodev.ecommerce.order.model.*;
 import com.juliodev.ecommerce.order.repository.OrderRepository;
 import com.juliodev.ecommerce.order.dto.OrderStatus;
-import com.juliodev.ecommerce.order.model.CartItem;
 import com.juliodev.ecommerce.order.model.Order;
+import com.juliodev.ecommerce.order.model.CartItem;
 import com.juliodev.ecommerce.order.model.OrderItem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
