@@ -1,9 +1,17 @@
+#spring:
+#  application:
+#    name: user-service
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/ecom_user
+#      database: ecom_user
+#server:
+#  port: 8082
+
 spring:
   application:
     name: user-service
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/ecom_user
-      database: ecom_user
-server:
-  port: 8082
+  config:
+    import: optional:configserver:http://localhost:8888
+    profiles:
+      active: default
