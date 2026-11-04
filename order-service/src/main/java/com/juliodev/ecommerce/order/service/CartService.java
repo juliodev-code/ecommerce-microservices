@@ -1,15 +1,17 @@
 package com.juliodev.ecommerce.order.service;
 
+import com.juliodev.ecommerce.order.clients.ProductServiceClient;
+import com.juliodev.ecommerce.order.clients.UserServiceClient;
 import com.juliodev.ecommerce.order.dto.CartItemRequest;
+import com.juliodev.ecommerce.order.dto.ProductResponse;
+import com.juliodev.ecommerce.order.dto.UserResponse;
 import com.juliodev.ecommerce.order.model.CartItem;
 import com.juliodev.ecommerce.order.repository.CartItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,6 +19,8 @@ import java.util.Optional;
 public class CartService {
     //private final ProductRepository productRepository;
     private final CartItemRepository cartItemRepository;
+    private final ProductServiceClient productServiceClient;
+    private final UserServiceClient userServiceClient;
     //private final UserRepository userRepository;
 
     public boolean addToCart(String userId, CartItemRequest request) {
@@ -34,6 +38,15 @@ public class CartService {
             return false;
 
         User user = userOpt.get();*/
+
+        // Look for product
+        ProductResponse productResponse = productServiceClient.getProductDetails(request.getProductId());
+        if (productResponse == null || productResponse.getStockQuantity() < request.getQuantity())
+            return false;
+
+        UserResponse userResponse = userServiceClient.getUserDetails(userId);
+        if (userResponse == null)
+            return false;
 
         CartItem existingCartItem = cartItemRepository.findByUserIdAndProductId(userId, request.getProductId());
         if (existingCartItem != null) {
