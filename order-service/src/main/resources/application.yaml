@@ -1,19 +1,7 @@
 spring:
-    application:
-        name: order-service
-    config:
-        import: optional:configserver:http://localhost:8888
-        profiles:
-            active: default
-#    datasource:
-#        url: jdbc:postgresql://localhost:5432/order
-#        username: juliodev
-#        password: juliodev
-#    jpa:
-#        database: POSTGRESQL
-#        show-sql: true
-#        hibernate:
-#            ddl-auto: update
-#        database-platform: org.hibernate.dialect.PostgreSQLDialect
-#server:
-#    port: 8083
+  application:
+    name: order-service
+  config:
+    import: optional:configserver:http://localhost:8888
+#    profiles:
+#      active: default

@@ -3,26 +3,5 @@ spring:
     name: product-service
   config:
     import: optional:configserver:http://localhost:8888
-    profiles:
-      active: default
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/product
-#    username: juliodev
-#    password: juliodev
-#  jpa:
-#    database: POSTGRESQL
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: update
-#    database-platform: org.hibernate.dialect.PostgreSQLDialect
-#  h2:
-#    console:
-#      enabled: true
-#  datasource:
-#    url: jdbc:h2:mem:test
-#  jpa:
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: create
-server:
-  port: 8081
+#    profiles:
+#      active: default
