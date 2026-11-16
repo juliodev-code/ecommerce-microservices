@@ -3,5 +3,6 @@ spring:
     name: order-service
   config:
     import: optional:configserver:http://localhost:8888
+    #com.juliodev.ecommerce.order: DEBUG
 #    profiles:
 #      active: default
